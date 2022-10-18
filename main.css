@@ -1,11 +1,7 @@
 *{box-sizing: border-box; margin: 0; font-family: 'Cairo', sans-serif;}
-body{}
 .page{
-    background-color: #e5e5f7;
-    opacity: 1;
-    background-image:  radial-gradient(#f1a4d6 2px, #dcf9ffa6 2px), radial-gradient(#a4b2f1 2px, #e5e5f7 2px);
-    background-size: 80px 80px;
-    background-position: 0 0,40px 40px;
+    background-image: url(img/Flipbook2.jpg);
+    background-size: cover;
     height: 712px;
 }
 .container{
@@ -13,8 +9,9 @@ body{}
     grid-template-columns: 150px 50% 1fr;
     column-gap: 25%;
     row-gap: 20%;
-    transform: translateY(75%);
+    transform: translateY(50%);
 }
+                 /* main */
 main{
     display: flex;
     justify-content: center;
@@ -34,18 +31,66 @@ main{
     transform: translateX(-85%);
     display: block;
     margin: 10px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
 }
-aside{
-    display: flex;
+
+/* ---------------------------------- */
+
+#git a{
+    display: none;
 }
-aside ul{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
+#git:hover a{
+    display: inline-block;
 }
+#git:hover img[alt="github1"]{
+    display: none;
+}
+
+#linked a{
+    display: none;
+}
+#linked:hover a{
+    display: inline-block;
+}
+#linked:hover img[alt="linkedin1"]{
+    display: none;
+}
+
+#insta a{
+    display: none;
+}
+#insta:hover a{
+    display: inline-block;
+}
+#insta:hover img[alt="instagram1"]{
+    display: none;
+}
+
+#face a{
+    display: none;
+}
+#face:hover a{
+    display: inline-block;
+}
+#face:hover img[alt="facebook1"]{
+    display: none;
+}
+
+#redd a{
+    display: none;
+}
+#redd:hover a{
+    display: inline-block;
+}
+#redd:hover img[alt="reddit1"]{
+    display: none;
+}
+/* ---------------------------------- */
 .immg{
-    background-image: url("img/icon.jpg");
-    background-size: cover;
+    background-image: url("img/icon1.jpg");
+    background-size: contain;
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -65,12 +110,252 @@ button{
     border-radius: 20px;
     border-color: #f5675d;
     background-color: #f5675d;
+    box-shadow: 5px 5px 5px;
 }
-main p{color: #5e5d5d; font-weight: bold;}
-/* aside{
-    border-right: 2px solid #ddd;
-    margin: 0 auto 0 0px;
+button:active{
+    box-shadow: none;
+    transform: translate(5px,5px);
+    -webkit-transform: translate(5px,5px);
+    -moz-transform: translate(5px,5px);
+    -ms-transform: translate(5px,5px);
+    -o-transform: translate(5px,5px);
 }
-aside:hover{
-    width: 200px
-} */
+main p{color: #8e8b8b; font-weight: bold;}
+main h1{
+    font-family: 'Merienda', cursive;
+    display: inline-block;
+    cursor: pointer;
+}
+.h11:hover #ya{
+    animation-name: chenge-color;
+    animation-duration: 0.1s;
+    
+}
+.h11:hover #se{
+    animation-name: chenge-color;
+    animation-duration: 0.3s;
+    
+}
+.h11:hover #en{
+    animation-name: chenge-color;
+    animation-duration: 0.5s;
+    
+}
+.h11:hover #-b{
+    animation-name: chenge-color;
+    animation-duration: 0.7s;
+}
+.h11:hover #ek{
+    animation-name: chenge-color;
+    animation-duration: 0.9s;
+}
+                /* End Of Main */
+
+                /* Aside */
+aside{
+    display: flex;
+}
+aside::after{
+    content: "";
+    width: 2px;
+    height: 716px;
+    background-color: #9a9abdc9;
+    position: absolute;
+    transform: translate(260px,-190px);
+}
+
+aside ul{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+aside ul li{
+    display: block;
+    margin: 10px;
+}
+#h::before{
+    content: "Home";
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    transform: translate(20px,-1px);
+    cursor: pointer;
+    visibility: hidden;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+}
+aside:hover #h::before{
+    visibility: visible;
+    transform: translate(50px,-1px);
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+}
+#h:hover:before{
+    color: #f5675d;
+}
+
+#a::before{
+    content: "About";
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    transform: translate(20px,-1px);
+    cursor: pointer;
+    visibility: hidden;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 0.2s;
+}
+aside:hover #a::before{
+    visibility: visible;
+    transform: translate(50px,-1px);
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 0.1s;
+}
+#a:hover:before{
+    color: #7a7ecb;
+}
+
+#s::before{
+    content: "Services";
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    transform: translate(20px,-1px);
+    cursor: pointer;
+    visibility: hidden;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 0.4s;
+}
+aside:hover #s::before{
+    visibility: visible;
+    transform: translate(50px,-1px);
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 0.2s;
+}
+#s:hover:before{
+    color: #e2b635;
+}
+
+#e::before{
+    content: "Experience";
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    transform: translate(20px,-1px);
+    cursor: pointer;
+    visibility: hidden;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 0.6s;
+}
+aside:hover #e::before{
+    visibility: visible;
+    transform: translate(50px,-1px);
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 0.3s;
+}
+#e:hover:before{
+    color: #4dada5;
+}
+
+#w::before{
+    content: "Works";
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    transform: translate(20px,-1px);
+    cursor: pointer;
+    visibility: hidden;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 0.8s;
+}
+aside:hover #w::before{
+    visibility: visible;
+    transform: translate(50px,-1px);
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 0.4s;
+}
+#w:hover:before{
+    color: #7a7ecb;
+}
+
+#b::before{
+    content: "Blog";
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    transform: translate(20px,-1px);
+    cursor: pointer;
+    visibility: hidden;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 1s;
+}
+aside:hover #b::before{
+    visibility: visible;
+    transform: translate(50px,-1px);
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 0.5s;
+}
+#b:hover:before{
+    color: #58b9e7;
+}
+
+#c::before{
+    content: "Contact";
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    transform: translate(20px,-1px);
+    cursor: pointer;
+    visibility: hidden;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 1.2s;
+}
+aside:hover #c::before{
+    visibility: visible;
+    transform: translate(50px,-1px);
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 0.6s;
+}
+#c:hover:before{
+    color: #4dada5;
+}
+/* -------------------------------------------------- */
+@keyframes chenge-color{
+    50%{color: white;}
+    100%{color: #1288ba;}
+}
